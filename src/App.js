@@ -1,9 +1,10 @@
-
+//import LoginPage from "./Components/LoginPage";
+import Body from "./Components/Body";
 
 function App() {
   return (
-    <div className="text-green-600">
-      Namaste , Netflix-gpt
+    <div >
+      <Body/>
     </div>
   );
 }

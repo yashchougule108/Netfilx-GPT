@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../Utlis/userSlice.js';
 
 const LoginPage = () => {
-  const navigate=useNavigate();
+  
   const dispatch =useDispatch();
 
   const [isSignIn ,setIsSignIn]=useState(true);
@@ -40,13 +40,12 @@ const LoginPage = () => {
       // ...
       const {uid,email,displayName,photoURL} = auth.currentUser;
       dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
-      navigate("/browse");
+      
     }).catch((error) => {
       // An error occurred
       // ...
     });
-    console.log(user);
-    navigate("/browse");
+   
     // ...
   })
   .catch((error) => {

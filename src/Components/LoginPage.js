@@ -6,6 +6,7 @@ import {signInWithEmailAndPassword,createUserWithEmailAndPassword ,updateProfile
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../Utlis/userSlice.js';
+import { BG_URL } from '../Utlis/constant.js';
 
 const LoginPage = () => {
   
@@ -64,7 +65,7 @@ const LoginPage = () => {
     // Signed in 
     const user = userCredential.user;
     // ...
-    navigate("/browse")
+    //navigate("/browse")
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -86,7 +87,7 @@ const LoginPage = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img src='https://assets.nflxext.com/ffe/siteui/vlv3/a99688ca-33c3-4099-9baa-07a2e2acb398/ca15fd28-b624-4852-8bfe-9cdd5c88475d/IN-en-20240520-popsignuptwoweeks-perspective_alpha_website_small.jpg' alt='bg-img'></img>
+        <img src={BG_URL} alt='bg-img'></img>
       </div>
       <form onSubmit={(e)=>e.preventDefault()} className='w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg'>
         <h1 className='text-center text-3xl py-4'>{isSignIn?"SIGN IN":"SIGN UP"}</h1>

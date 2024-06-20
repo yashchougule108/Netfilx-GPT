@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@google/generative-ai": "^0.13.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.4.5",
     "firebase": "^10.12.2",
+    "openai": "^4.51.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
@@ -42,5 +45,10 @@
     "@reduxjs/toolkit": "^2.2.5",
     "react-router-dom": "^6.23.1",
     "tailwindcss": "^3.4.3"
-  }
+  },
+  "description": "-create react app\r -configured TailwindCss\r -header\r -routing of app\r -login input form\r -signup form\r -form validation\r -useRef Hook\r -firebase setup\r - deploy app for production\r -user authentication\r -create signup user account\r -implement sign in user api\r -create Redux store with userslice\r -implemented signout\r -update profile\r -bug fix: sign up user displayname and profile picture update\r -bugfix : if the user is not logged in redirect /browse to login page and vice-versa\r -unsuscribed to the onAuthstateChanged callback  constant file.\r -add hardcoded values to constant files\r -register TMDB API & create an app & get access token\r - Get data from TMDB now playing movies list\r -custom hook for now playing movies\r -create movieSlice\r -update store with movies data\r -planning for MainContainer & secondary container\r -fetch data for trailer video\r -update store with trailer video data\r -embedded the youtube video and make it autoplay and mute\r -tailwind classes to make main container look awesome\r -build secondary component\r -build movie list\r -build movie card\r -TMDB Image CDN URL\r -usePopularMovies custom Hook;\r -created GPT search page\r -gpt search bar\r -implemented multilang feature",
+  "main": "tailwind.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

@@ -17,6 +17,6 @@ const lang={
     search:"検索",
     gptsearchplaceholder:"今日は何を見るのが好きですか"
   }
-}
+};
 
 export default lang;

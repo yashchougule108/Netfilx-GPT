@@ -87,9 +87,9 @@ const LoginPage = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img src={BG_URL} alt='bg-img'></img>
+        <img className='h-screen object-cover' src={BG_URL} alt='bg-img'></img>
       </div>
-      <form onSubmit={(e)=>e.preventDefault()} className='w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg'>
+      <form onSubmit={(e)=>e.preventDefault()} className='w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg'>
         <h1 className='text-center text-3xl py-4'>{isSignIn?"SIGN IN":"SIGN UP"}</h1>
         {!isSignIn?<input ref={name} className='p-3 m-4 w-full bg-gray-600 rounded-md' type='text' placeholder='Enter your name'></input>:""}
         <input ref={email} className='p-3 m-4 w-full bg-gray-600 rounded-md' type='email' placeholder='Enter your email'></input>

@@ -15,9 +15,12 @@ const gptSlice=createSlice({
             const{movieNames,movieList}=action.payload;
             state.gpt_moviesList=movieList;
             state.movieNames=movieNames;
+        },
+        clearMovieSlice:(state)=>{
+            state.gpt_moviesList.length=0;
         }
     }
 });
 
-export const{setToggleGpt,addMovieResult}=gptSlice.actions;
+export const{setToggleGpt,addMovieResult ,clearMovieSlice}=gptSlice.actions;
 export default gptSlice.reducer;

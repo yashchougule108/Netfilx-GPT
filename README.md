@@ -37,7 +37,17 @@
 -created GPT search page
 -gpt search bar
 -implemented multilang feature
+-get gemini ai api key
+-get search api call
+-fetched gpt movies suggestions from TMDB
+-created gptslice added data
+-reused movilist component to make movie suggestion container
+-memiozation-->(prevent api calls by store info)
+- adding .env file 
+-adding .env file to gitignore
+-made our site responsible
 
+-
 
 # features
 -Login/Sign Up

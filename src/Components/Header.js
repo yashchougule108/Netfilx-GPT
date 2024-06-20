@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { setToggleGpt } from '../Utlis/gptSlice';
+import {  setToggleGpt } from '../Utlis/gptSlice';
 import { changeLanguage } from '../Utlis/configSlice';
 import { addUser, removeUser } from '../Utlis/userSlice';
 import { useNavigate } from 'react-router-dom';
@@ -19,6 +19,7 @@ const Header = () => {
   //console.log(usernew.photoURL);
   const handleNetflixGpt=()=>{
   dispatch(setToggleGpt());
+
   }
   const handleLogout=()=>{
 signOut(auth).then(() => {
@@ -54,10 +55,10 @@ useEffect(()=>{
   return ()=>unsuscribe();
 },[])
   return (
-    <div className=' w-full px-8 py-2 absolute z-10 bg-gradient-to-b from-black flex justify-between'>
-      <img src={LOGO} alt='logo'></img>
-      {usernew&&<div className='flex'>
-       {showGpt&& <select className='my-6 p-2 bg-black text-white'onChange={handleChangeLang}>
+    <div className=' w-full px-8 py-2 absolute z-10 bg-gradient-to-b from-black flex flex-col md:flex-row justify-between'>
+      <img className='w-44 mx-auto md:mx-0' src={LOGO} alt='logo'></img>
+      {usernew&&<div className='flex '>
+       {showGpt&& <select className='my-6 mx-6 md:p-2 bg-black text-white'onChange={handleChangeLang}>
       {
         SUPPORTED_LANGUAGES.map(lang=><option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)
       }
